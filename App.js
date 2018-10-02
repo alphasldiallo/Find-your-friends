@@ -1,15 +1,17 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, AppRegistry } from 'react-native';
+import findFriend from './components/findFriend'
+import beacon from './components/beacon'
+import Navigation from './navigation/navigation'
 
 export default class App extends React.Component {
   render() {
     return (
-      <View style={styles.container}>
-        <Text>Open up App.js to start working on your app!</Text>
-      </View>
+     <Navigation />
     );
   }
 }
+
 
 const styles = StyleSheet.create({
   container: {
@@ -19,3 +21,6 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
 });
+
+AppRegistry.registerComponent('MyReactNativeApp', () => HelloWorld);
+

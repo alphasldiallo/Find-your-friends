@@ -1,6 +1,7 @@
 {
-  "name": "empty-project-template",
+  "name": "festival",
   "main": "node_modules/expo/AppEntry.js",
+  "version": "0.0.1",
   "private": true,
   "scripts": {
     "start": "expo start",
@@ -9,8 +10,18 @@
     "eject": "expo eject"
   },
   "dependencies": {
+    "@babel/preset-react": "^7.0.0",
+    "babel-core": "^6.26.3",
     "expo": "^30.0.1",
     "react": "16.3.1",
-    "react-native": "https://github.com/expo/react-native/archive/sdk-30.0.0.tar.gz"
+    "react-native": "https://github.com/expo/react-native/archive/sdk-29.0.0.tar.gz",
+    "react-native-button": "^2.3.0",
+    "react-native-snackbar": "^0.5.1",
+    "react-navigation": "^2.17.0"
+  },
+  "rnpm": {
+    "assets": [
+      "./assets/fonts/"
+    ]
   }
 }
