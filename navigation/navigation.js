@@ -10,7 +10,6 @@ const Navigation = createStackNavigator(
         Home:
         {
             screen: Img
-
         },
         findFriend: {
             screen: findFriend,

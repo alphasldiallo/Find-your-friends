@@ -6,7 +6,7 @@ import navigation from "react-navigation"
 class Img extends React.Component{
 
     static navigationOptions = {
-        title: 'Welcome',
+        title: 'Homepage',
       }
 
    _navigateToFindFriend = () =>
@@ -19,38 +19,63 @@ class Img extends React.Component{
         const { navigate } = this.props.navigation
 
         return(
+    <View style={styles.container}>
         <ImageBackground
           style={styles.backgroundImage}
-          source={require('../assets/applause.jpg')} >
+          source={require('../assets/bg.jpg')} >
           <View style= {styles.content}>
-          <Text style= {styles.mainTitle }>Matchmore Festival</Text>
-          <Text style= {styles.heading2}> Rock your life </Text>
-                <Button title="Find your friends" onPress={() => navigate('findFriend', {name : "find_Friend"})} style= {styles.btn}  />
-                <Button title="Festival Guide" onPress= {() => navigate('beacon', {name : "Beacons"})} ></Button>
-
-          </View>
-        </ImageBackground>
+            <View style= {styles.img_view}>
+                <Image source={require('../assets/logo.png')} style={styles.img}></Image>
+            </View>
+            <Text style= {styles.mainTitle }>Matchmore Festival</Text>
+                <Text style= {styles.heading2}> Rock your life </Text>
+                    <Button title="Find your friends" onPress={() => navigate('findFriend', {name : "find_Friend"})} style= {styles.btn}  />
+                    <Button title="Festival Guide" onPress= {() => navigate('beacon', {name : "Beacons"})} ></Button>
+            
+            </View>
+            </ImageBackground>
+    </View>
         )
     }
 
 }
 
 const styles = StyleSheet.create({
+    container:
+    {
+        flex: 1,
+        justifyContent: "center",
+        flexDirection: "column"
+    },
+    img:
+    {
+        height: 100,
+        width: 100,
+        justifyContent: "center",
+        alignItems: "center"
+    },
+    img_view:
+    {
+        alignItems:"center",
+        justifyContent:'center'
+    },
     backgroundImage:
     {
-        flex:1,
-        opacity: 0.7,
+        opacity: 1,
         width: "100%",
-        height: "100%"
+        height: "100%",
+        justifyContent:"center",
+        flexDirection: "column"
     },
     btn:{
 
     },
     content:
     {
-        flex:2,
         flexDirection: "column",
-        justifyContent: "center"
+        backgroundColor: "white",
+        justifyContent: "center",
+        opacity: 0.9
     },
     mainTitle:
     {
@@ -60,7 +85,10 @@ const styles = StyleSheet.create({
     heading2:
     {
         textAlign: "center",
-        fontSize: 30
+        fontSize: 20,
+        fontStyle:"italic",
+        marginBottom: 10,
+        backgroundColor: "rgba(0,0,0,0.1)"
     },
     text:
     {
